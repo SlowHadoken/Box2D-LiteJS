@@ -63,8 +63,8 @@ function Mat22(aOvA, vB) {
   this.col2 = new Vec2();
   if (typeof aOvA === "number" && vB === undefined) {
     let c = Math.cos(aOvA), s = Math.sin(aOvA);
-    this.col1.set( c, s); // |cosθ -sinθ|
-    this.col2.set(-s, c); // |sinθ  conθ|
+    this.col1.set( c, s); // |cos -sin|
+    this.col2.set(-s, c); // |sin  con|
   } else if (typeof aOvA === "object" && typeof vB === "object") {
     this.col1 = aOvA; // |col1.x  col2.x|
     this.col2 = vB;   // |col1.y  col2.y|
