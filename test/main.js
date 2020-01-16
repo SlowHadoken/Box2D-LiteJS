@@ -63,11 +63,11 @@ function Mat22(aOvA, vB) {
   this.col2 = new Vec2();
   if (typeof aOvA === "number" && vB === undefined) {
     let c = Math.cos(aOvA), s = Math.sin(aOvA);
-    this.col1.set( c, s); // |col1.x  col2.x|
-    this.col2.set(-s, c); // |col1.y  col2.y|
+    this.col1.set( c, s); // |cosθ -sinθ|
+    this.col2.set(-s, c); // |sinθ  conθ|
   } else if (typeof aOvA === "object" && typeof vB === "object") {
-    this.col1 = aOvA; // vector
-    this.col2 = vB;   // vector
+    this.col1 = aOvA; // |col1.x  col2.x|
+    this.col2 = vB;   // |col1.y  col2.y|
   }
 }
 // STATIC METHODS
