@@ -560,7 +560,7 @@ function collide(contacts, bodyA, bodyB) {
   let dA = Mat22.mulMV(RotAT, dp); // Vec2
   let dB = Mat22.mulMV(RotBT, dp); // Vec2
 
-  let C = Mat22.mulMM(RotAT, RotBT);
+  let C = Mat22.mulMM(RotAT, RotB);
   let absC = Mat22.abs(C);
   let absCT = Mat22.transpose(absC);
 
