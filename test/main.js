@@ -1016,9 +1016,11 @@ world.addBody(floor);
 
 let box;
 let boxPos = new Vec2(170, -150);
+let boxesPerRow = 10;
+let boxesPerCol = 10;
 let boxOffset = 16;
-for (let i = 0; i < 10; i++) {
-  for (let j = 0; j < 10; j++) {
+for (let i = 0; i < boxesPerRow; i++) {
+  for (let j = 0; j < boxesPerCol; j++) {
     box = new Body();
     box.set(new Vec2(12, 12), 5);
     box.position.set(boxPos.x + i * boxOffset, boxPos.y + j * boxOffset);
